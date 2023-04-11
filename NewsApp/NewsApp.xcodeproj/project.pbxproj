@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04249EFF29E53C3500FAF6F4 /* ArticleCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04249EFD29E53C3500FAF6F4 /* ArticleCoreData+CoreDataClass.swift */; };
+		04249F0029E53C3500FAF6F4 /* ArticleCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04249EFE29E53C3500FAF6F4 /* ArticleCoreData+CoreDataProperties.swift */; };
 		0458730629DD8D4000787945 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458730529DD8D4000787945 /* AppDelegate.swift */; };
 		0458730829DD8D4000787945 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458730729DD8D4000787945 /* SceneDelegate.swift */; };
 		0458730A29DD8D4000787945 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458730929DD8D4000787945 /* ViewController.swift */; };
@@ -17,9 +19,12 @@
 		0458731F29DD95B300787945 /* NewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458731E29DD95B300787945 /* NewsAPI.swift */; };
 		0458732329DD9E7F00787945 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458732229DD9E7F00787945 /* CustomTableViewCell.swift */; };
 		0458732629DDB08E00787945 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458732529DDB08E00787945 /* DetailViewController.swift */; };
+		04F6766629E3F1960080320D /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6766529E3F1960080320D /* NetworkConnection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04249EFD29E53C3500FAF6F4 /* ArticleCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		04249EFE29E53C3500FAF6F4 /* ArticleCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0458730229DD8D4000787945 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0458730529DD8D4000787945 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0458730729DD8D4000787945 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +37,7 @@
 		0458731E29DD95B300787945 /* NewsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPI.swift; sourceTree = "<group>"; };
 		0458732229DD9E7F00787945 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		0458732529DDB08E00787945 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		04F6766529E3F1960080320D /* NetworkConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +54,9 @@
 		045872F929DD8D4000787945 = {
 			isa = PBXGroup;
 			children = (
+				04249EFD29E53C3500FAF6F4 /* ArticleCoreData+CoreDataClass.swift */,
+				04249EFE29E53C3500FAF6F4 /* ArticleCoreData+CoreDataProperties.swift */,
+				04F6766529E3F1960080320D /* NetworkConnection.swift */,
 				0458731D29DD959400787945 /* Module */,
 				0458730429DD8D4000787945 /* NewsApp */,
 				0458730329DD8D4000787945 /* Products */,
@@ -158,11 +167,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0458732329DD9E7F00787945 /* CustomTableViewCell.swift in Sources */,
+				04F6766629E3F1960080320D /* NetworkConnection.swift in Sources */,
 				0458730A29DD8D4000787945 /* ViewController.swift in Sources */,
 				0458730629DD8D4000787945 /* AppDelegate.swift in Sources */,
 				0458731F29DD95B300787945 /* NewsAPI.swift in Sources */,
+				04249F0029E53C3500FAF6F4 /* ArticleCoreData+CoreDataProperties.swift in Sources */,
 				0458731029DD8D4000787945 /* NewsApp.xcdatamodeld in Sources */,
 				0458730829DD8D4000787945 /* SceneDelegate.swift in Sources */,
+				04249EFF29E53C3500FAF6F4 /* ArticleCoreData+CoreDataClass.swift in Sources */,
 				0458732629DDB08E00787945 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

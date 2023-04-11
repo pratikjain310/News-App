@@ -11,8 +11,9 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var newsImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
-    var detailArticle : Article?
-    
+    var secondActivityItem : NSURL?
+    var detailArticle : ArticleCoreData?
+    var detailArticle2 : Article?
     override func viewDidLoad() {
         super.viewDidLoad()
         assignValue()
@@ -20,11 +21,14 @@ class DetailViewController: UIViewController {
     
     @IBAction func shareBarButton(_ sender: UIBarButtonItem) {
         let firstActivityItem = "Description you want.."
-
-        let secondActivityItem : NSURL = NSURL(string: detailArticle!.url)!
-        
+        if NetworkConnection.shared.isReacheableOnCellular == true {
+            secondActivityItem = NSURL(string: (detailArticle2?.url)!)!
+        }else {
+            secondActivityItem = NSURL(string: (detailArticle?.url)!)!
+            
+        }
         let activityViewController : UIActivityViewController = UIActivityViewController(
-            activityItems: [firstActivityItem, secondActivityItem], applicationActivities: nil)
+            activityItems: [firstActivityItem, secondActivityItem!], applicationActivities: nil)
         
         activityViewController.popoverPresentationController?.sourceView = self.view
         
@@ -51,14 +55,28 @@ class DetailViewController: UIViewController {
         self.present(activityViewController, animated: true, completion: nil)
     }
     func assignValue(){
-        publishedAtLabel.text = detailArticle?.publishedAt
-        descriptionLabel.text = detailArticle?.description
-        titleLabel.text = detailArticle?.title
-        let url = URL(string: detailArticle!.urlToImage)
-        do {
-            newsImageView.image = UIImage(data: try Data(contentsOf: url!))
-        }catch let error {
-            print(error.localizedDescription)
+        if NetworkConnection.shared.isReacheableOnCellular == true {
+            
+            publishedAtLabel.text = detailArticle2?.publishedAt
+            descriptionLabel.text = detailArticle2?.description
+            titleLabel.text = detailArticle2?.title
+            let url = URL(string: detailArticle2!.urlToImage)
+            do {
+                newsImageView.image = UIImage(data: try Data(contentsOf: url!))
+            }catch let error {
+                print(error.localizedDescription)
+            }
+        }else {
+            
+            publishedAtLabel.text = detailArticle?.publishedAt
+            descriptionLabel.text = detailArticle?.articleDescription
+            titleLabel.text = detailArticle?.title
+            let url = URL(string: (detailArticle?.urlToImage)!)
+            do {
+                newsImageView.image = UIImage(data: try Data(contentsOf: url!))
+            }catch let error {
+                print(error.localizedDescription)
+            }
         }
     }
    
