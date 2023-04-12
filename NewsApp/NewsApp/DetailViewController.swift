@@ -71,12 +71,8 @@ class DetailViewController: UIViewController {
             publishedAtLabel.text = detailArticle?.publishedAt
             descriptionLabel.text = detailArticle?.articleDescription
             titleLabel.text = detailArticle?.title
-            let url = URL(string: (detailArticle?.urlToImage)!)
-            do {
-                newsImageView.image = UIImage(data: try Data(contentsOf: url!))
-            }catch let error {
-                print(error.localizedDescription)
-            }
+            newsImageView.image = UIImage(systemName: "wifi.slash")
+           
         }
     }
    

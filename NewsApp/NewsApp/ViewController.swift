@@ -128,13 +128,8 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
             let newsArticleObj = newsArticle[indexPath.row]
             cell.headingLabel.text = newsArticleObj.title
             cell.detailLabel.text = newsArticleObj.articleDescription
-            let url = URL(string: (newsArticleObj.urlToImage)!)
-            do {
-                cell.newsImageView.image = UIImage(data: try Data(contentsOf: url!))
-            }catch let error {
-                print(error.localizedDescription)
-            }
-        }
+            cell.newsImageView.image = UIImage(systemName: "wifi.slash")
+           }
         return cell
     }
     
